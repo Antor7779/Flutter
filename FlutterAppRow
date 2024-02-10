@@ -1,0 +1,44 @@
+import 'package:flutter/material.dart';
+
+void main() => runApp(
+  MaterialApp(
+    home: Scaffold(
+      appBar: AppBar(
+        title: Text('Customize and Learn'),
+        centerTitle: true,
+        backgroundColor: Colors.red[600],
+      ),
+      //*****************
+      body: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: <Widget>[
+          Text('Hello world'),
+          TextButton(
+            onPressed: () {
+              // Add your button press logic here
+              print('Button Clicked');
+            },
+            style: TextButton.styleFrom(
+              backgroundColor: Colors.cyan,
+            ),
+            child: Text('Click here'),
+          ),
+          Container(
+            color: Colors.orangeAccent,
+            padding: EdgeInsets.all(30.0),
+            child: Text('this is inside container'),
+          )
+        ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: Text('Click'),
+        backgroundColor: Colors.orange[600],
+        onPressed: () {
+          // FloatingActionButton press logic here
+          print('FloatingActionButton Clicked');
+        },
+      ),
+    ),
+  ),
+);
