@@ -1,0 +1,60 @@
+import 'package:flutter/material.dart';
+
+void main() => runApp(
+  MaterialApp(
+    home: Scaffold(
+      appBar: AppBar(
+        title: Text('Customize and Learn'),
+        centerTitle: true,
+        backgroundColor: Colors.red[600],
+        actions: [
+          FloatingActionButton(
+            child: Text('Click'),
+            backgroundColor: Colors.orange[600],
+            onPressed: () {
+              // FloatingActionButton press logic here
+              print('FloatingActionButton Clicked');
+            },
+          ),
+        ],
+      ),
+      //*****************
+      //column
+      body: Row(
+
+        children: <Widget>[
+
+         Expanded(child: Image.asset('assets/cloth.jpg'),
+         flex:3,
+         ) ,
+          Expanded(
+            flex: 1,
+            child: Container(
+              padding:EdgeInsets.all(27.0),
+              color: Colors.pinkAccent,
+              child: Text('1'),
+            ),
+          ),
+          Expanded(
+            flex: 1,
+            child: Container(
+              padding:EdgeInsets.all(27.0),
+              color: Colors.green,
+              child: Text('2'),
+            ),
+          ),
+          Expanded(
+            flex: 3,
+            child: Container(
+              padding:EdgeInsets.all(27.0),
+              color: Colors.orange,
+              child: Text('3'),
+            ),
+          ),
+
+
+        ],
+      ),
+    ),
+  ),
+);
