@@ -1,0 +1,53 @@
+import 'package:flutter/material.dart';
+
+void main() => runApp(
+  MaterialApp(
+    home: Scaffold(
+      appBar: AppBar(
+        title: Text('Customize and Learn'),
+        centerTitle: true,
+        backgroundColor: Colors.red[600],
+        actions: [
+          FloatingActionButton(
+            child: Text('Click'),
+            backgroundColor: Colors.orange[600],
+            onPressed: () {
+              // FloatingActionButton press logic here
+              print('FloatingActionButton Clicked');
+            },
+          ),
+        ],
+      ),
+      //*****************
+      //column
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.end,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Row(
+            children: <Widget>[
+              Text('Transaction'),
+              Text('Main Balance'),
+            ],
+          ),
+          Container(
+            padding: EdgeInsets.all(20.0),
+            color: Colors.cyan,
+            child: Text('Id'),
+          ),
+          // Add more widgets to the Column as needed
+          Container(
+            padding: EdgeInsets.all(30.0),
+            color: Colors.orangeAccent,
+            child: Text('Name'),
+          ),
+          Container(
+            padding: EdgeInsets.all(40.0),
+            color: Colors.green,
+            child: Text('Password'),
+          ),
+        ],
+      ),
+    ),
+  ),
+);
